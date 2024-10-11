@@ -2,14 +2,14 @@
 
 #include "ll/api/mod/NativeMod.h"
 
-namespace my_mod {
+namespace ordered_piston {
 
-class MyMod {
+class OrderedPiston {
 
 public:
-    static MyMod& getInstance();
+    static OrderedPiston& getInstance();
 
-    MyMod(ll::mod::NativeMod& self) : mSelf(self) {}
+    OrderedPiston(ll::mod::NativeMod& self) : mSelf(self) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -30,4 +30,4 @@ private:
     ll::mod::NativeMod& mSelf;
 };
 
-} // namespace my_mod
+} // namespace ordered_piston
